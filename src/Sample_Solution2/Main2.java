@@ -1,3 +1,4 @@
+package Sample_Solution2;
 /*
 Create a User class with parameters:
 - int id
@@ -8,7 +9,6 @@ Create a User class with parameters:
 + User ()
 + User (int id, login, passwor, name, surname) Getters and Setters
 + String getData () // This method returns all user data
-
 Создать меню
 1- создать User(Добавить в массив)
 2- Посмотреть список всех
@@ -19,9 +19,9 @@ Create a User class with parameters:
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class Main2 {
     public static Scanner scan = new Scanner(System.in);
-    public static ArrayList<User> users = new ArrayList<>();
+    public static ArrayList<User2> users = new ArrayList<>();
     public static void createUser(){
         System.out.println("---------------------");
         System.out.println("Меню создания пользователя: ");
@@ -37,7 +37,7 @@ public class Main {
         String surname = scan.next();
 
         if (id!=null && !login.trim().isEmpty() && !password.trim().isEmpty() && !name.trim().isEmpty() && !surname.trim().isEmpty()){
-            User user = new User();
+            User2 user = new User2();
             user.setId(id);
             user.setLogin(login);
             user.setPassword(password);
@@ -72,7 +72,7 @@ public class Main {
             }
         }
     }
-    public static User getUserById(Integer id){
+    public static User2 getUserById(Integer id){
         for (int i=0; i< users.size(); i++){
             if (users.get(i).getId()==id){
                 return users.get(i);
@@ -84,7 +84,7 @@ public class Main {
         showAllList();
         System.out.print("Введите id пользователя которого хотите редактировать: ");
         Integer id = scan.nextInt();
-        User user = getUserById(id);
+        User2 user = getUserById(id);
         if (id==null){
 
             System.out.print("Введите login: ");

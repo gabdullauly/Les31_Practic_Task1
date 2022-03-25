@@ -8,13 +8,9 @@ Create a User class with parameters:
 + User ()
 + User (int id, login, passwor, name, surname) Getters and Setters
 + String getData () // This method returns all user data
+*/
 
-Создать меню
-1- создать User(Добавить в массив)
-2- Посмотреть список всех
-3- Удалить весь список
-4- Выйти из программы
- */
+package Sample_Solution1;
 
 public class User {
     private Integer id;
@@ -32,12 +28,12 @@ public class User {
         this.surname = surname;
     }
 
-    public Integer getId (){
+    public Integer getId(){
         return id;
     }
 
     public String getLogin(){
-        return login;
+        return  login;
     }
 
     public String getPassword(){
